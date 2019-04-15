@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import ImageUploader from './components/imageUploader/imgUploader';
+import Navbar from './components/navigation';
+import Deashboard from './components/dashboard/dashboard';
+import EditImage from './components/dashboard/galaryEdit';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <BrowserRouter>
+          <div className="row">
+              <Navbar />
+              
+                <div className="container">
+                  <Switch>
+                    <Route exact  path='/' component={ Deashboard } />
+                    <Route path='/edit/:id' component={EditImage} />
+                    <Route  exact path='/uploadfile' component={ ImageUploader } />
+                  </Switch>
+              </div>
+          </div>
+        </BrowserRouter>
+      </>
     );
   }
 }

@@ -1,33 +1,103 @@
-.App {
-  text-align: center;
+[hidden] {
+  display: none !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.galeryImg {
+  position: relative;
+  margin: 0 10px !important;
+  padding: 0 !important;
+  width: 85% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.galeryImg img {
+  max-height: 100%;
+  display: block;
+  margin: 0 10px;
+  max-height: 150px;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 0px;
+
+    transform: inherit !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav .brand-logo {
+    font-size: 1em;
+  }
+
+  nav ul a {
+    padding: 0 5px;
+  }
+}
+
+nav .activeLink {
+  color: #e91e63;
+}
+
+.selected {
+  background-color: red;
+}
+
+.imgContr {
+  opacity: 0;
+  justify-content: space-around;
+  display: inline-flex;
+  height: 0;
+}
+
+.galeryImg:hover .imgContr {
+  opacity: 1;
+  height: auto;
+}
+
+.imgContr div {
+  cursor: pointer;
+  z-index: 9;
+}
+.imgContr a {
+  color: rgba(0,0,0,0.87);
+}
+
+.poinerText {
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.far {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poiterWrap {
+  height: 22px;
+}
+.poiterWrap.vertical {
+  position: absolute;
+  height: 100%;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  padding: 0;
+}
+.vertical.right{
+  right: 0 !important;
+}
+.vertical.left{
+  left: 0 !important;
+}
+.galeryImgWrap {
+  position: relative;
+  height: 200px;
 }
