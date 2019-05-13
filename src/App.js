@@ -5,6 +5,7 @@ import ImageUploader from './components/imageUploader/imgUploader';
 import Navbar from './components/navigation';
 import Deashboard from './components/dashboard/dashboard';
 import EditImage from './components/dashboard/galaryEdit';
+import testCompWrap from './components/test/testCompWrap';
 
 
 class App extends Component {
@@ -20,6 +21,8 @@ class App extends Component {
                     <Route exact  path='/' component={ Deashboard } />
                     <Route path='/edit/:id' component={EditImage} />
                     <Route  exact path='/uploadfile' component={ ImageUploader } />
+                    <Route  exact path='/testCompWrap' component={ testCompWrap } />
+                    
                   </Switch>
               </div>
           </div>

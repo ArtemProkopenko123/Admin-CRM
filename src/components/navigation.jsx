@@ -12,6 +12,7 @@ const Navbar = () => {
                 <ul className="right">
                     <li><NavLink activeClassName="activeLink" exact to='/'>Image Galary</NavLink></li>
                     <li><NavLink activeClassName="activeLink" exact to='/uploadfile'>Upload Images</NavLink></li>
+                    <li><NavLink activeClassName="activeLink" exact to='/testCompWrap'>testCompWrap</NavLink></li>
                     <li><NavLink to='/'>Log Out</NavLink></li>
                 </ul>
             </div>
